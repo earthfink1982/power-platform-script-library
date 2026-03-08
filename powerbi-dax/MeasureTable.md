@@ -1,5 +1,5 @@
 This measure table is designed to do two things:
-    Document all columns and measures in the data model 
+    Document all columns and measures in the data model  
     Serve as the central measure table.
 
 ```
