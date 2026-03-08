@@ -29,7 +29,7 @@ let
     // 6. TRANSFORM: Weekday Index (Monday = 0 for easier sorting/math)
     AddDayOfWeekNum = Table.AddColumn(AddDayName, "Day of Week Number", each Date.DayOfWeek([Date], Day.Monday), Int64.Type),
     
-    // 7. TRANSFORM: Added Start of Month for easier grouping
-    AddStartofMonth = Table.TransformColumns(AddDayOfWeekNum,{{"Date", Date.StartOfMonth, type date}})
+    // 7. ADD: Added Start of Month for easier grouping
+    AddStartofMonth = Table.AddColumn(AddDayOfWeekNum,{{"Month Start Date", Date.StartOfMonth, type date}})
 in
     AddStartofMonth
