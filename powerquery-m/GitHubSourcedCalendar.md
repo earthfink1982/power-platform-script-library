@@ -5,10 +5,14 @@ let
     // 1. Fetch the raw binary from GitHub
     RawData = Web.Contents("https://raw.githubusercontent.com/earthfink1982/power-platform-script-library/refs/heads/main/powerquery-m/CalendarTable.m"),
     
-    // 2. Convert the binary to a single continuous text string
+    //2. Convert the binary to a single continuous text string
+    
     ScriptText = Text.FromBinary(RawData),
     
     // 3. Evaluate the text string as M code
+    
     EvaluatedScript = Expression.Evaluate(ScriptText, #shared)
 in
     EvaluatedScript
+
+    
