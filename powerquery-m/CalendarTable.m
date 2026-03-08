@@ -30,6 +30,6 @@ let
     AddDayOfWeekNum = Table.AddColumn(AddDayName, "Day of Week Number", each Date.DayOfWeek([Date], Day.Monday), Int64.Type),
     
     // 7. ADD: Added Start of Month for easier grouping
-    AddStartofMonth = Table.AddColumn(AddDayOfWeekNum,"Month Start Date", each Date.StartOfMonth, type date)
+    AddStartofMonth = Table.AddColumn(AddDayOfWeekNum,"Month Start Date", each Date.StartOfMonth([Date]), type date)
 in
     AddStartofMonth
