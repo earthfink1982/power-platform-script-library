@@ -1,6 +1,6 @@
-This measure table is designed to do two things:
-    Document all columns and measures in the data model  
-    Serve as the central measure table.
+# This measure table is designed to do two things:  
+## Document all columns and measures in the data model  
+## Serve as the central measure table.
 
 ```
 _Measure and Model Info = 
