@@ -30,6 +30,6 @@ let
     AddDayOfWeekNum = Table.AddColumn(AddDayName, "Day of Week Number", each Date.DayOfWeek([Date], Day.Monday), Int64.Type),
     
     // 7. TRANSFORM: Added Start of Month for easier grouping
-    AddStartofMonth = Table.TransformColumns(EvaluatedScript,{{"Date", Date.StartOfMonth, type date}})
+    AddStartofMonth = Table.TransformColumns(AddDayOfWeekNum,{{"Date", Date.StartOfMonth, type date}})
 in
     AddStartofMonth
