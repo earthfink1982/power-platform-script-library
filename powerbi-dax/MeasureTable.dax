@@ -1,6 +1,3 @@
-
-## DAX Measure Table
-
 _Measure and Model Info = 
 
 // This measure table is designed to do two things: 1. Document all columns and measures in the data model 2. Serve as the central measure table.
