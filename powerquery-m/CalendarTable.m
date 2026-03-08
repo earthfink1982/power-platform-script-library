@@ -29,7 +29,7 @@ let
     // 6. TRANSFORM: Weekday Index (Monday = 0 for easier sorting/math)
     AddDayOfWeekNum = Table.AddColumn(AddDayName, "Day of Week Number", each Date.DayOfWeek([Date], Day.Monday), Int64.Type),
     
-    // 7. FORMATTING: Year-Month for Slicers (e.g., 2026-03)
-    AddYearMonth = Table.AddColumn(AddDayOfWeekNum, "Year Month", each Text.From([Year]) & "-" & Text.PadStart(Text.From([Month Number]), 2, "0"), type text)
+    // 7. TRANSFORM: Added Start of Month for easier grouping
+    AddStartofMonth = Table.TransformColumns(EvaluatedScript,{{"Date", Date.StartOfMonth, type date}})
 in
-    AddYearMonth
+    AddStartofMonth
