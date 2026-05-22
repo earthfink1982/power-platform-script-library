@@ -2,7 +2,7 @@
 ## Document all columns and measures in the data model  
 ## Serve as the central measure table.
 
-```
+```cs
 _Measure and Model Info = 
 
 // create variables for each
